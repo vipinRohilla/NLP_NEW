@@ -176,7 +176,7 @@ def hello_world():
 
 
     data_3 = {
-          'good' : good_array,
+          'good' : str(good_array),
         #   'bad' : bad_array,
         #   'neutral' : neutral_array,
         #   'service' : services_array,
