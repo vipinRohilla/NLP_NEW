@@ -70,113 +70,113 @@ def hello_world():
 
     rating_array = np.array(havells_android_reviews_copy['score'])
 
-    # size = len(rating_array)
-    # good = 0;
-    # bad = 0;
-    # neutral = 0;
-    # good_array = [];
-    # bad_array = [];
-    # neutral_array = [];
-    # good_require = 0;
-    # bad_require = 0;
+    size = len(rating_array)
+    good = 0;
+    bad = 0;
+    neutral = 0;
+    good_array = [];
+    bad_array = [];
+    neutral_array = [];
+    good_require = 0;
+    bad_require = 0;
 
-    # for i in range(0, size):
-    #   if(good_score[i] > good_require):
-    #     if(rating_array[i] >= 3):
-    #       good = 1;
-    #       bad = 0;
-    #       neutral = 0;
-    #     elif(rating_array[i]<3):
-    #       # print("g_neutral")
-    #       good = 0;
-    #       bad = 0;
-    #       neutral = 1;
-    #   elif(bad_score[i] > bad_require):
-    #     if(rating_array[i] < 3):
-    #       good = 0;
-    #       bad = 1;
-    #       neutral = 0;
-    #     elif(rating_array[i] >= 3):
-    #       good = 0;
-    #       bad = 0;
-    #       neutral = 1;
-    #   elif(rating_array[i] >= 3):
-    #     good = 1;
-    #     bad = 0;
-    #     neutral = 0;
-    #   elif(rating_array[i] < 3):
-    #     good = 0;
-    #     bad = 1;
-    #     neutral = 0;
-    #   else:
-    #     good = 0;
-    #     bad = 0;
-    #     neutral = 0;
-    #   good_array.append(good)
-    #   bad_array.append(bad)
-    #   neutral_array.append(neutral)
+    for i in range(0, size):
+      if(good_score[i] > good_require):
+        if(rating_array[i] >= 3):
+          good = 1;
+          bad = 0;
+          neutral = 0;
+        elif(rating_array[i]<3):
+          # print("g_neutral")
+          good = 0;
+          bad = 0;
+          neutral = 1;
+      elif(bad_score[i] > bad_require):
+        if(rating_array[i] < 3):
+          good = 0;
+          bad = 1;
+          neutral = 0;
+        elif(rating_array[i] >= 3):
+          good = 0;
+          bad = 0;
+          neutral = 1;
+      elif(rating_array[i] >= 3):
+        good = 1;
+        bad = 0;
+        neutral = 0;
+      elif(rating_array[i] < 3):
+        good = 0;
+        bad = 1;
+        neutral = 0;
+      else:
+        good = 0;
+        bad = 0;
+        neutral = 0;
+      good_array.append(good)
+      bad_array.append(bad)
+      neutral_array.append(neutral)
 
-    # services_key = ['शिकायत','समस्या','सर्विस', 'visit', 'palce','place', 'person', 'communication','employee','employees','badtameej','declining','write','wrote','install','span','generated','technisian','visited','visiting','behavior','agency','declining','staffs','booking','rating', 'stopped' , 'charged','criminal', 'waiting','lodge','appointment','irresponsible','executives','fellow','replacement','replacementthen','expertise','booked','services','support','register','answering','rudely','level','ground','mentellay','harassed','talking','feedback','lodging','technician','complaint','status','engineer','poor','ticket','technicians','action', 'untrained', 'serial', 'providers', 'incompetent', 'cleaning', 'customer', 'care', 'number', 'toll', 'support', 'rectification', 'rectification', 'raising', 'req','service', 'services', 'srvcs', 'raised', 'request', 'attends', 'calling', 'call', 'called', 'maintance', 'warrantyguaranteecustomer' ,'warranty', 'installation', 'centre', 'repair','repaired',  ]
-    # ui_key = ['design', 'user', 'friendly', 'lengthy', 'flow', 'bugs', 'bug', 'hang', 'hanging', 'hanged', 'freeze', 'mobile', 'application', 'homepage' 'redirects', 'uploading', 'image', 'images', 'img', 'functioning', 'barcode', 'features', 'stopped', 'wifi', 'scan', 'qr','code', 'app', 'ui', 'UI', 'uI', 'Ui', 'interface', 'interphase','feedback' ,'otp', 'update', 'updated', ]
-    # iot_key = ['functioning', 'barcode', 'stopped' ,'lloyd', 'serial','connecting','wifi', 'scan', 'qr','code', 'motor', ]
-    # solar_key = [  'inverter', 'batteries', 'solar', 'manufacturing', 'manufacturer', 'power', 'powers', 'energy', 'enrgy', 'generation', 'generating', 'generated']
+    services_key = ['शिकायत','समस्या','सर्विस', 'visit', 'palce','place', 'person', 'communication','employee','employees','badtameej','declining','write','wrote','install','span','generated','technisian','visited','visiting','behavior','agency','declining','staffs','booking','rating', 'stopped' , 'charged','criminal', 'waiting','lodge','appointment','irresponsible','executives','fellow','replacement','replacementthen','expertise','booked','services','support','register','answering','rudely','level','ground','mentellay','harassed','talking','feedback','lodging','technician','complaint','status','engineer','poor','ticket','technicians','action', 'untrained', 'serial', 'providers', 'incompetent', 'cleaning', 'customer', 'care', 'number', 'toll', 'support', 'rectification', 'rectification', 'raising', 'req','service', 'services', 'srvcs', 'raised', 'request', 'attends', 'calling', 'call', 'called', 'maintance', 'warrantyguaranteecustomer' ,'warranty', 'installation', 'centre', 'repair','repaired',  ]
+    ui_key = ['design', 'user', 'friendly', 'lengthy', 'flow', 'bugs', 'bug', 'hang', 'hanging', 'hanged', 'freeze', 'mobile', 'application', 'homepage' 'redirects', 'uploading', 'image', 'images', 'img', 'functioning', 'barcode', 'features', 'stopped', 'wifi', 'scan', 'qr','code', 'app', 'ui', 'UI', 'uI', 'Ui', 'interface', 'interphase','feedback' ,'otp', 'update', 'updated', ]
+    iot_key = ['functioning', 'barcode', 'stopped' ,'lloyd', 'serial','connecting','wifi', 'scan', 'qr','code', 'motor', ]
+    solar_key = [  'inverter', 'batteries', 'solar', 'manufacturing', 'manufacturer', 'power', 'powers', 'energy', 'enrgy', 'generation', 'generating', 'generated']
 
 
-    # services_score = []
-    # ui_score = []
-    # iot_score = []
-    # solar_score = []
-    # services = 0;
-    # ui = 0;
-    # iot = 0;
-    # solar = 0;
-    # for i in complete_words:
-    #     services = 0;
-    #     ui = 0;
-    #     iot = 0;
-    #     solar = 0;
-    #     for j in i:
-    #         if j in services_key:
-    #             services = services+1;
-    #         if j in ui_key:
-    #             ui = ui+1;
-    #         if j in iot_key:
-    #             iot = iot+1;
-    #         if j in solar_key:
-    #             solar = solar+1;
-    #     services_score.append(services)
-    #     ui_score.append(ui)
-    #     iot_score.append(iot)
-    #     solar_score.append
+    services_score = []
+    ui_score = []
+    iot_score = []
+    solar_score = []
+    services = 0;
+    ui = 0;
+    iot = 0;
+    solar = 0;
+    for i in complete_words:
+        services = 0;
+        ui = 0;
+        iot = 0;
+        solar = 0;
+        for j in i:
+            if j in services_key:
+                services = services+1;
+            if j in ui_key:
+                ui = ui+1;
+            if j in iot_key:
+                iot = iot+1;
+            if j in solar_key:
+                solar = solar+1;
+        services_score.append(services)
+        ui_score.append(ui)
+        iot_score.append(iot)
+        solar_score.append
 
-    # services_array = []
-    # ui_array = []
-    # iot_array = []
-    # solar_array = []
-    # size = len(services_score)
+    services_array = []
+    ui_array = []
+    iot_array = []
+    solar_array = []
+    size = len(services_score)
 
-    # for i in range(0,size):
-    #     if(services_score[i] > 0):
-    #         services_array.append(1)
-    #     else:
-    #         services_array.append(0)
-    #     if(ui_score[i] > 0):
-    #         ui_array.append(1)
-    #     else:
-    #         ui_array.append(0)
-    #     if(iot_score[i] > 0):
-    #         iot_array.append(1)
-    #     else:
-    #         iot_array.append(0)
-    #     if(solar_score[i] > 0):
-    #         solar_array.append(1)
-    #     else:
-    #         solar_array.append(0)
+    for i in range(0,size):
+        if(services_score[i] > 0):
+            services_array.append(1)
+        else:
+            services_array.append(0)
+        if(ui_score[i] > 0):
+            ui_array.append(1)
+        else:
+            ui_array.append(0)
+        if(iot_score[i] > 0):
+            iot_array.append(1)
+        else:
+            iot_array.append(0)
+        if(solar_score[i] > 0):
+            solar_array.append(1)
+        else:
+            solar_array.append(0)
 
 
 
     data_3 = {
-          'good' : "good_array",
+          'good' : good_array,
         #   'bad' : bad_array,
         #   'neutral' : neutral_array,
         #   'service' : services_array,
